@@ -24,7 +24,7 @@ def hat_linear(data, bandwidth = 1.0, xmin = None, xmax = None, npoints = 100, c
         The data we are building the kernel density estimator from.
 
     bandwidth : float
-        Width of the linear hat function
+        Half width of the linear hat function, i.e., (-bandwidth, bandwidth)
 
     xmin : float or None
         Bottom range of grid.  If none, then xmin = np.min(data).
