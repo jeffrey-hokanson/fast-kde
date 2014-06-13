@@ -1,4 +1,4 @@
-#include "fkde.h"
+#include "kde.h"
 #include "math.h"
 #include <stdlib.h>
 
