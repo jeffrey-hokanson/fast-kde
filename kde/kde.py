@@ -12,7 +12,11 @@
  Currently, we implement these as a series of dumb functions, but we may wish to 
  add a class interface at a later date
 """
-import _kde
+PYTHON_ONLY = False
+try:
+    import _kde
+except:
+    PYTHON_ONLY = True
 import numpy as np
 from math import floor, ceil
 
@@ -43,6 +47,9 @@ def hat_linear(data, bandwidth = 1.0, xmin = None, xmax = None, npoints = 100, c
     den : numpy array
         Value of the kernel density estimator on xgrid.
     """
+
+    if PYTHON_ONLY:
+        code = 'python'
 
     if xmin is None:
         xmin = np.min(data)
